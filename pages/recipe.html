@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="./../style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/images/ForkKnife.svg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="bg-white p-0.5">
+    <header class="px-5 py-5 md:px-6 py-5 shadow-sm">
+      <nav class="
+                flex justify-between
+                flex-wrap
+                w-full
+                py-4
+                md:py-0
+                px-4
+                text-lg text-gray-700
+              ">
+        <div class="logo">
+          <img src="./assets/images/Foodieland.png" alt="">
+        </div>
+        <div class="flex gap-3">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-16 w-5 cursor-pointer md:hidden block"
+              fill="none" viewBox="0 0 24 24" stroke="black">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+          <ul class="
+                    pt-4
+                    text-base text-[#FFF]
+                    md:flex
+                    md:justify-between 
+                    md:pt-0">
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/index.html">Home</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/recipe.html">Recipes</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/blogpost.html">Blog</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/contact.html">Contact</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/contact.html">About us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden md:flex">
+          <img class="hover:cursor-pointer" src="./assets/images/Social.svg" alt="Social Icons" />
+        </div>
+      </nav>
+    </header>
+  </div>
+  <script>
+    const button = document.querySelector('#menu-button');
+    const menu = document.querySelector('#menu');
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  <div class="mx-10">
+    <div>
+      <div class="my-20 grid md:grid-cols-4 sm:grid-cols-2">
+        <div class=" grid col-span-3 ">
+          <div>
+            <div>
+              <h1 class=" font-semibold text-6xl">Health Japanese Fried Rice</h1>
+            </div>
+            <div class=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 mt-10">
+              <div class="flex pr-10	border-r-2 border-[#F2F2F2]">
+                <div class="flex mr-3"> <img src="./assets/images/john.svg"></div>
+                <div>
+                  <h1 class="text-base	font-bold	my-2 ">John Smith</h1>
+                  <p class="font-medium	text-sm	 text-[#626262]">15 March 2022</p>
+                </div>
+              </div>
+              <div class=" flex pl-10 pr-10	 border-r-2 border-[#F2F2F2]">
+                <div class="	flex mr-3"> <img src="./assets/images/prep.svg"></div>
+                <div>
+                  <h1 class=" text-base	font-medium	my-2 text-[#626262]">PREP TIME</h1>
+                  <p class=" font-medium	text-sm	 text-[#626262]">15 Minutes</p>
+                </div>
+              </div>
+              <div class=" flex pl-10 pr-10	 border-r-2 border-[#F2F2F2]">
+                <div class="	flex mr-3"> <img src="./assets/images/prep.svg"></div>
+                <div>
+                  <h1 class=" text-base	font-medium	my-2 text-[#626262]">COOK TIME</h1>
+                  <p class="  font-medium	text-sm	 text-[#626262]">15 Minutes</p>
+                </div>
+              </div>
+              <div class=" flex pl-10 pr-10">
+                <div class="	flex mr-3"> <img src="./assets/images/chicken.svg"></div>
+                <div class="  ">
+                  <p class="  font-medium	text-sm	 text-[#626262] mt-5	">Chicken</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" md:relative ">
+          <div class=" md:absolute bottom-0 right-0 flex">
+            <div>
+              <div
+                class=" bg-[url('./assets/images/colrpb.svg')] w-20 h-20 flex place-content-center place-items-center		">
+                <img src="./assets/images/printer.svg " class=" w-10 h-10 cursor-pointer">
+              </div>
+              <div class="font-medium	text-xs text-center	cursor-pointer">PRINT</div>
+            </div>
+            <div>
+              <div
+                class=" bg-[url('./assets/images/colrpb.svg')] w-20 h-20 flex place-content-center place-items-center		">
+                <img src="./assets/images/share.svg " class=" w-10 h-10 cursor-pointer">
+              </div>
+              <div class=" font-medium	text-xs text-center	cursor-pointer">PRINT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div
+          class="grid  col-span-3	bg-[url('./assets/images/recipebigimage.png')] h-[620px] rounded-3xl bg-center bg-cover">
+        </div>
+        <div class="bg-[#E7FAFE] rounded-3xl p-10 ">
+          <div class="  grid justify-left text-[#000000]-500 text-base font-semibold">
+            <h1>Nutrition Information</h1>
+          </div>
+          <div class=" flex  justify-between py-3 border-b-[2px] border-[#DCDCDC]-50">
+            <p class="font-medium text-lg text-[#626262]">Calories</p>
+            <h1 class="font-medium text-lg">219.9 kcal</h1>
+          </div>
+          <div class="  flex justify-between py-3 border-b-[2px] border-[#DCDCDC]-50">
+            <p class="font-medium text-lg text-[#626262]">Total Fat</p>
+            <h1 class="font-medium text-lg">10.7 g</h1>
+          </div>
+          <div class="flex justify-between py-3 border-b-[2px] border-[#DCDCDC]-50">
+            <p class="font-medium text-lg text-[#626262]">Protein</p>
+            <h1 class="font-medium text-lg">7.9 g</h1>
+          </div>
+          <div class="flex justify-between py-3 border-b-[2px] border-[#DCDCDC]-50">
+            <p class="font-medium text-lg text-[#626262]">Carbohydrate</p>
+            <h1 class="font-medium text-lg">22.3 g</h1>
+          </div>
+          <div class="flex justify-between py-3 border-b-[2px] border-[#DCDCDC]-50">
+            <p class="font-medium text-lg text-[#626262]">Cholesterol</p>
+            <h1 class="font-medium text-lg">37.4 mg</h1>
+          </div>
+          <div class="flex mt-20">
+            <p class="text-center font-normal text-base">
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-10">
+        <p class="text-[#666666]-500 text-base font-normal my-20">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="grid xl:grid-cols-5 grid-cols-1">
+        <div class="xl:col-span-3">
+          <div>
+            <p class="text-3xl font-semibold">Ingredients</p>
+          </div>
+          <div>
+            <p class="text-xl font-semibold mt-10">For main dish</p>
+          </div>
+          <div class=" w-full">
+            <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+              <input type="radio" name="first" checked />
+              <label for="first">Lorem ipsum dolor sit amet</label>
+            </div>
+            <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+              <input type="radio" name="first" />
+              <label for="first">Lorem ipsum dolor sit amet</label>
+            </div>
+            <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+              <input type="radio" name="first" />
+              <label for="second">Lorem ipsum dolor sit amet</label>
+            </div>
+            <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+              <input type="radio" name="first" />
+              <label for="first">Lorem ipsum dolor sit amet</label>
+            </div>
+            <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+              <input type="radio" name="first" />
+              <label for="second">Lorem ipsum dolor sit amet</label>
+            </div>
+          </div>
+          <div class=" mt-20">
+            <div>
+              <p class="text-xl font-semibold">For the sauce</p>
+            </div>
+            <div class=" w-full">
+              <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+                <input type="radio" name="first" />
+                <label for="first">Lorem ipsum dolor sit amet</label>
+              </div>
+              <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+                <input type="radio" name="first" />
+                <label for="first">Lorem ipsum dolor sit amet</label>
+              </div>
+              <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+                <input type="radio" name="first" />
+                <label for="first">Lorem ipsum dolor sit amet</label>
+              </div>
+              <div class=" py-5 border-b-[2px] border-[#DCDCDC]-50">
+                <input type="radio" name="first" />
+                <label for="second">Lorem ipsum dolor sit amet</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-100 col-span-2 pl-16">
+          <div>
+            <h1 class="text-3xl font-semibold">Other Recipe</h1>
+          </div>
+          <div class="flex flex-col gap-5 py-10">
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="./assets/images/blogimage9.png" alt="blogimage" />
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-xl font-semi-bold leading-6 tracking-[-0.8px]">
+                  Chicken Meatballs <br />
+                  with Cream Cheese
+                </h3>
+                <p class="text-sm font-medium text-[#626262]">By Andreas Paula</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="./assets/images/blogimage10.png" alt="blogimage" />
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-xl font-semi-bold leading-6 tracking-[-0.8px]">
+                  Chicken Meatballs <br />
+                  with Cream Cheese
+                </h3>
+                <p class="text-sm font-medium text-[#626262]">By Andreas Paula</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-center">
+              <div>
+                <img src="./assets/images/blogimage11.png" alt="blogimage" />
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-xl font-semi-bold leading-6 tracking-[-0.8px]">
+                  Chicken Meatballs <br />
+                  with Cream Cheese
+                </h3>
+                <p class="text-sm font-medium text-[#626262]">By Andreas Paula</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img src="./assets/images/Ads.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#E7F9FD] mx-6 mb-10 pb-5 md:pb-0 rounded-3xl md:flex md:mx-20 mt-20">
+    <div class="mt-64">
+      <img class="hidden md:flex" src="/assets/images/Salad1.png" alt="Salad1" />
+    </div>
+    <div class="md:flex flex flex-col items-center gap-8 pt-8 mt-20">
+      <div class="text-2xl md:text-3xl text-center font-semi-bold">
+        <h1>Deliciousness to your inbox</h1>
+      </div>
+      <div class="text-xs md:text-sm font-normal flex flex-col text-center text-[#626262]">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqut enim ad minim
+        </p>
+      </div>
+      <div class="bg-white border-b-2 rounded-3xl flex justify-between items-center pt-1 pl-8">
+        <h2 class="pr-16 text-sm md:text-1xl">Your Email Address...</h2>
+        <button class="border-b-2 rounded-xl bg-black text-white py-3 px-8">
+          Subscribe
+        </button>
+      </div>
+    </div>
+    <div class="md:mt-96">
+      <img class="w-auto h-auto" src="/assets/images/Salad3.png" alt="Salad3" />
+    </div>
+    <img class="ml-44 rounded-3xl md:mt-64 md:ml-10 hidden md:flex" src="/assets/images/Salad2.png" alt="Salad2" />
+  </div>
+  <div class=" xl:mt-20  md:mt-15 mt-10">
+    <div>
+      <h1 class=" font-semibold text-base text-center md:text-2xl lg:text-3xl xl:text-4xl">
+        You may like these recipe too
+      </h1>
+    </div>
+  </div>
+  <div class="contact lg:mt-20 grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 px-20 py-10">
+    <div>
+      <div>
+        <img src="./assets/images/29.png" class="rounded-3xl" />
+      </div>
+      <h1 class="text-lg font-semibold">
+        Mixed Tropical Fruit Salad with Superfood Boosts
+      </h1>
+      <div class=" flex">
+        <div class=" bg-[url('./assets/images/prep.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">30 Minutes</p>
+        </div>
+        <div class=" bg-[url('./assets/images/chicken.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">Healthy</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="./assets/images/28.png" class="rounded-3xl" />
+      </div>
+      <h1 class=" text-lg font-semibold">
+        Mixed Tropical Fruit Salad with Superfood Boosts
+      </h1>
+      <div class=" flex">
+        <div class=" bg-[url('./assets/images/prep.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">30 Minutes</p>
+        </div>
+        <div class=" bg-[url('./assets/images/chicken.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">Healthy</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="./assets/images/27.png" class="rounded-3xl" />
+      </div>
+      <h1 class=" text-lg font-semibold">
+        Mixed Tropical Fruit Salad with Superfood Boosts
+      </h1>
+      <div class=" flex">
+        <div class=" bg-[url('./assets/images/prep.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">30 Minutes</p>
+        </div>
+        <div class=" bg-[url('./assets/images/chicken.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">Healthy</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="./assets/images/26.png" class="rounded-3xl" />
+      </div>
+      <h1 class=" text-lg font-semibold">
+        Mixed Tropical Fruit Salad with Superfood Boosts
+      </h1>
+      <div class=" flex">
+        <div class=" bg-[url('./assets/images/prep.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">30 Minutes</p>
+        </div>
+        <div class=" bg-[url('./assets/images/chicken.svg')] px-3 h-6 mt-2"></div>
+        <div class="pt-3">
+          <p class="font-medium text-sm text-[#626262]">Healthy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="flex justify-between md:mx-12 m-5 my-10">
+    <div class="flex flex-col gap-3">
+      <div class="logo">
+        <img src="./assets/images/Foodieland.png" alt="">
+      </div>
+      <div>
+        <p class="font-normal text-base text-[#626262]">
+          Lorem ipsum dolor sit amet, consectetuipisicing elit,
+        </p>
+      </div>
+    </div>
+    <div class="hidden md:block">
+      <div class="flex gap-10 text-base">
+        <a href="http://127.0.0.1:5500/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/pages/recipe.html">Recipes</a>
+        <a href="http://127.0.0.1:5500/pages/blogpost.html">Blog</a>
+        <a href="http://127.0.0.1:5500/pages/contact.html">Contact</a>
+        <a href="http://127.0.0.1:5500/pages/contact.html">About us</a>
+      </div>
+    </div>
+    <div class="md:hidden">
+      <i class="fa-solid fa-list-ul" style="color: #000000"></i>
+    </div>
+  </div>
+  <div class="md:flex justify-between m-5">
+    <div class="flex gap-1 text-center md:ml-[500px] m-5">
+      <p class="font-normal text-[#626262]">© 2020 Flowbase. Powered by</p>
+      <p class="font-normal text-[#FF7967]">Webflow</p>
+    </div>
+    <div>
+      <img class="md:mr-12 m-5" src="./assets/images/Social.svg" alt="Social Icons" />
+    </div>
+  </div>
+</body>
+
+</html>

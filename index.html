@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Home</title>
+  <link rel="shortcut icon" href="./assets/images/ForkKnife.svg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="bg-white p-0.5">
+    <header class="px-5 py-5 md:px-6 py-5 shadow-sm">
+      <nav class=" flex justify-between flex-wrap w-full py-4 md:py-0 px-4 text-lg text-gray-700 ">
+        <div class=" logo">
+          <img src="./assets/images/Foodieland.png" alt="">
+        </div>
+        <div class="flex gap-3">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-16 w-5 cursor-pointer md:hidden block"
+              fill="none" viewBox="0 0 24 24" stroke="black">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+          <ul class="
+                    pt-4
+                    text-base text-[#FFF]
+                    md:flex
+                    md:justify-between 
+                    md:pt-0">
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/index.html">Home</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/recipe.html">Recipes</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/blogpost.html">Blog</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/contact.html">Contact</a>
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block text-black hover:text-gray-500"
+                href="http://127.0.0.1:5500/pages/contact.html">About us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden md:flex">
+          <img class="hover:cursor-pointer" src="./assets/images/Social.svg" alt="Social Icons" />
+        </div>
+      </nav>
+    </header>
+  </div>
+  <script>
+    const button = document.querySelector('#menu-button');
+    const menu = document.querySelector('#menu');
+
+
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  <div class="flex">
+    <div class="px-4 mt-10 mb-10 rounded-r-2xl px-4 bg-[#E7FAFE]"></div>
+    <div class="flex justify-between mx-5 my-5 rounded-2xl bg-[#E7FAFE]">
+      <div class="pl-10">
+        <div class="pb-10 pt-14">
+          <button
+            class="flex gap-3 px-4 py-1 text-sm text-black font-semibold rounded-full border border-white bg-white">
+            <img src="./assets/images/Newsletter.png" alt="Newsletter" />
+            Hot Recipes
+          </button>
+        </div>
+        <h2 class="text-1xl font-semibold md:text-6xl md:font-bold">
+          Spicy delicious chicken wings
+        </h2>
+        <p class="text-base font-normal pt-10 pb-10">
+          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqut enim ad minim
+        </p>
+        <div class="flex gap-7">
+          <button
+            class="flex gap-3 px-4 py-1 text-sm text-black font-semibold rounded-full border border-[#0000000D] bg-[#0000000D]">
+            <img src="./assets/images/Timer.svg" alt="Timer" />
+            <h2>30 Minutes</h2>
+          </button>
+          <button
+            class="flex gap-3 px-4 py-1 text-sm text-black font-semibold rounded-full border border-[#0000000D] bg-[#0000000D]">
+            <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+            Chicken
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 pt-24">
+          <div class="flex ml-10 md:ml-0 gap-2 pb-10">
+            <img src="./assets/images/Man.svg" alt="Man" />
+            <h2 class="text-base">
+              <strong>John Smith</strong><br />15 March 2022
+            </h2>
+          </div>
+          <div class="ml-12 md:ml-0 pt-5 md:pt-1 mb-10">
+            <button
+              class="flex gap-5 mr-3 text-sm text-white font-semibold rounded-full border border-[#0000000D] bg-black md:gap-3 px-5 py-2 text-sm text-white font-semibold rounded-full border border-[#0000000D] bg-black">
+              <h2 class="pt-0.5">View Recipes</h2>
+              <img src="./assets/images/View More.svg" alt="View More" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex pt-10">
+        <div>
+          <img src="./assets/images/Badge.png" alt="Badge" />
+        </div>
+      </div>
+      <div>
+        <img class="w-[1082px] h-full rounded-r-2xl hidden md:flex" src="./assets/images/Hero Image.png"
+          alt="Hero Image" />
+      </div>
+    </div>
+    <div class="px-4 mt-10 mb-10 rounded-l-2xl bg-[#E7FAFE]"></div>
+  </div>
+  <div class="grid grid-cols-1 md:flex justify-between mx-20 pt-20">
+    <div>
+      <h2 class="text-2xl text-center md:text-5xl font-semibold mb-10">
+        Categories
+      </h2>
+    </div>
+    <div class="ml-20 md:ml-0">
+      <button class="px-5 py-3 text-sm text-black font-semibold rounded-2xl border border-white bg-[#E7FAFE]">
+        View All Categories
+      </button>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-6 gap-5 ml-20 pt-20">
+    <div>
+      <img src="./assets/images/Image 1.png" alt="Image 1" />
+      <h2 class="text-lg font-semibold pt-10 pl-1">Breakfast</h2>
+    </div>
+    <div>
+      <img src="./assets/images/Image 2.png" alt="Image 2" />
+      <h2 class="text-lg font-semibold pt-10 pl-1">Vegan</h2>
+    </div>
+    <div>
+      <img src="./assets/images/Image 3.png" alt="Image 3" />
+      <h2 class="text-lg font-semibold pt-10 pl-1">Meat</h2>
+    </div>
+    <div>
+      <img src="./assets/images/Image 4.png" alt="Image 4" />
+      <h2 class="text-lg font-semibold pt-10 pl-1">Dessert</h2>
+    </div>
+    <div>
+      <img src="./assets/images/Image 5.png" alt="Image 5" />
+      <h2 class="text-lg font-semibold pt-10 pl-1">Lunch</h2>
+    </div>
+    <div>
+      <img src="./assets/images/image 6.png" alt="image 6" />
+      <h2 class="text-lg font-semibold pt-10 pl-1">Chocolate</h2>
+    </div>
+  </div>
+  <div class="text-center mt-32">
+    <h2 class="text-3xl font-semibold md:text-5xl">
+      Simple and tasty recipes
+    </h2>
+    <p class="text-sm md:text-base font-normal mt-10">
+      Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+      tempor incididunt ut <br />labore et dolore magna aliqut enim ad minim
+    </p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-24 my-10">
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set1.png" alt="Set1" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          Big and Juicy Wagyu Beef Cheeseburger
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set2.png" alt="Set2" />
+        <h2 class="pt-3 ml-2 mb-7 text-lg font-semibold">
+          Fresh Lime Roasted Salmon with Ginger Sauce
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set3.png" alt="Set3" />
+        <h2 class="pt-3 ml-2 mb-7 text-lg font-semibold">
+          Strawberry Oatmeal Pancake with Honey Syrup
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-24 my-10">
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set5.png" alt="Set5" />
+        <h2 class="pt-3 ml-2 mb-7 text-lg font-semibold">
+          Fresh and Healthy Mixed Mayonnaise Salad
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set6.png" alt="Set6" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          Chicken Meatballs with Cream Cheese
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img class="w-full h-full" src="./assets/images/Ads.png" alt="Ads" />
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-24 my-10">
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set7.png" alt="Set7" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          Fruity Pancake with Orange & Blueberry
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set8.png" alt="Set8" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          The Best Easy One Pot Chicken and Rice
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#e9fafd] rounded-3xl">
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl w-full h-full" src="./assets/images/Set9.png" alt="Set9" />
+        <h2 class="pt-3 ml-2 mb-7 text-lg font-semibold">
+          The Creamiest Creamy Chicken and Bacon Pasta
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sm:grid grid-cols-1 md:flex mx-20 my-24">
+    <div class="mt-24">
+      <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter leading-tight mb-7">
+        Everyone can be a <br />
+        chef in their own kitchen
+      </h2>
+      <p class="text-base font-normal mb-12">
+        Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqut enim ad minim
+      </p>
+      <button class="px-5 py-3 text-sm text-white font-semibold rounded-2xl border border-white bg-black">
+        Learn More
+      </button>
+    </div>
+    <div class="hidden md:flex">
+      <img class="bg-gradient-to-t from-teal-50 rounded-3xl" src="./assets/images/Male Pic.png" alt="Male Pic" />
+    </div>
+  </div>
+  <div class="bg-gradient-to-t from-teal-100 px-14 pb-20">
+    <div class="text-center pt-20 pb-20">
+      <h2 class="text-2xl md:text-5xl font-semibold">
+        Check out @foodieland on Instagram
+      </h2>
+      <p class="text-sm md:text-xl font-normal pt-10">
+        Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqut enim ad minim
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-7">
+      <div class="bg-white pb-5">
+        <div class="flex justify-between">
+          <div class="flex gap-2 px-4 py-3">
+            <div>
+              <img src="./assets/images/Main Insta.svg" alt="Main Insta" />
+            </div>
+            <div>
+              <h2 class="text-sm font-semibold">Foodieland.</h2>
+              <h2 class="text-xs font-normal">Tokyo, Japan</h2>
+            </div>
+            <div class="pt-1.5">
+              <img src="./assets/images/Main Insta2.svg" alt="Main Insta2" />
+            </div>
+          </div>
+          <div class="pt-5 pr-5">
+            <img src="./assets/images/Main Insta3.svg" alt="Main Insta3" />
+          </div>
+        </div>
+        <div>
+          <img class="w-full h-full" src="./assets/images/Insta Post1.png" alt="Insta Post1" />
+        </div>
+        <div class="flex justify-between py-3 px-4">
+          <div class="flex gap-3">
+            <img src="./assets/images/Like.svg" alt="Like" />
+            <img src="./assets/images/Comment.svg" alt="Comment" />
+            <img src="./assets/images/Messanger.svg" alt="Messanger" />
+          </div>
+          <div>
+            <img class="pt-2 mr-5" src="./assets/images/Pagination.svg" alt="Pagination" />
+          </div>
+          <div>
+            <img src="./assets/images/Save.svg" alt="Save" />
+          </div>
+        </div>
+        <div class="flex gap-2 px-4">
+          <img src="./assets/images/Insta Post.svg" alt="Insta Post" />
+          <h2 class="text-xs font-normal">
+            Liked by <strong>craig_love</strong> and
+            <strong>44,686</strong>
+          </h2>
+        </div>
+        <div class="px-4 pt-2">
+          <h2 class="text-base font-normal">
+            <strong>Foodieland.</strong> The vegetables dishes need to have
+            certain vitamin for those people
+          </h2>
+        </div>
+        <div class="pt-5 px-4">
+          <p class="text-slate-700 text-sm">September 19</p>
+        </div>
+      </div>
+      <div class="bg-white pb-5">
+        <div class="flex justify-between">
+          <div class="flex gap-2 px-4 py-3">
+            <div>
+              <img src="./assets/images/Main Insta.svg" alt="Main Insta" />
+            </div>
+            <div>
+              <h2 class="text-sm font-semibold">Foodieland.</h2>
+              <h2 class="text-xs font-normal">Tokyo, Japan</h2>
+            </div>
+            <div class="pt-1.5">
+              <img src="./assets/images/Main Insta2.svg" alt="Main Insta2" />
+            </div>
+          </div>
+          <div class="pt-5 pr-5">
+            <img src="./assets/images/Main Insta3.svg" alt="Main Insta3" />
+          </div>
+        </div>
+        <div>
+          <img class="w-full h-full" src="./assets/images/Insta Post2.png" alt="Insta Post2" />
+        </div>
+        <div class="flex justify-between py-3 px-4">
+          <div class="flex gap-3">
+            <img src="./assets/images/Like.svg" alt="Like" />
+            <img src="./assets/images/Comment.svg" alt="Comment" />
+            <img src="./assets/images/Messanger.svg" alt="Messanger" />
+          </div>
+          <div>
+            <img class="pt-2 mr-5" src="./assets/images/Pagination.svg" alt="Pagination" />
+          </div>
+          <div>
+            <img src="./assets/images/Save.svg" alt="Save" />
+          </div>
+        </div>
+        <div class="flex gap-2 px-4">
+          <img src="./assets/images/Insta Post.svg" alt="Insta Post" />
+          <h2 class="text-xs font-normal">
+            Liked by <strong>craig_love</strong> and
+            <strong>44,686</strong>
+          </h2>
+        </div>
+        <div class="px-4 pt-2">
+          <h2 class="text-base font-normal">
+            <strong>Foodieland.</strong> The vegetables dishes need to have
+            certain vitamin for those people
+          </h2>
+        </div>
+        <div class="pt-5 px-4">
+          <p class="text-slate-700 text-sm">September 19</p>
+        </div>
+      </div>
+      <div class="bg-white pb-5">
+        <div class="flex justify-between">
+          <div class="flex gap-2 px-4 py-3">
+            <div>
+              <img src="./assets/images/Main Insta.svg" alt="Main Insta" />
+            </div>
+            <div>
+              <h2 class="text-sm font-semibold">Foodieland.</h2>
+              <h2 class="text-xs font-normal">Tokyo, Japan</h2>
+            </div>
+            <div class="pt-1.5">
+              <img src="./assets/images/Main Insta2.svg" alt="Main Insta2" />
+            </div>
+          </div>
+          <div class="pt-5 pr-5">
+            <img src="./assets/images/Main Insta3.svg" alt="Main Insta3" />
+          </div>
+        </div>
+        <div>
+          <img class="w-full h-full" src="./assets/images/Insta Post3.png" alt="Insta Post3" />
+        </div>
+        <div class="flex justify-between py-3 px-4">
+          <div class="flex gap-3">
+            <img src="./assets/images/Like.svg" alt="Like" />
+            <img src="./assets/images/Comment.svg" alt="Comment" />
+            <img src="./assets/images/Messanger.svg" alt="Messanger" />
+          </div>
+          <div>
+            <img class="pt-2 mr-5" src="./assets/images/Pagination.svg" alt="Pagination" />
+          </div>
+          <div>
+            <img src="./assets/images/Save.svg" alt="Save" />
+          </div>
+        </div>
+        <div class="flex gap-2 px-4">
+          <img src="./assets/images/Insta Post.svg" alt="Insta Post" />
+          <h2 class="text-xs font-normal">
+            Liked by <strong>craig_love</strong> and
+            <strong>44,686</strong>
+          </h2>
+        </div>
+        <div class="px-4 pt-2">
+          <h2 class="text-base font-normal">
+            <strong>Foodieland.</strong> The vegetables dishes need to have
+            certain vitamin for those people
+          </h2>
+        </div>
+        <div class="pt-5 px-4">
+          <p class="text-slate-700 text-sm">September 19</p>
+        </div>
+      </div>
+      <div class="bg-white pb-5">
+        <div class="flex justify-between">
+          <div class="flex gap-2 px-4 py-3">
+            <div>
+              <img src="./assets/images/Main Insta.svg" alt="Main Insta" />
+            </div>
+            <div>
+              <h2 class="text-sm font-semibold">Foodieland.</h2>
+              <h2 class="text-xs font-normal">Tokyo, Japan</h2>
+            </div>
+            <div class="pt-1.5">
+              <img src="./assets/images/Main Insta2.svg" alt="Main Insta2" />
+            </div>
+          </div>
+          <div class="pt-5 pr-5">
+            <img src="./assets/images/Main Insta3.svg" alt="Main Insta3" />
+          </div>
+        </div>
+        <div>
+          <img class="w-full h-full" src="./assets/images/Insta Post4.png" alt="Insta Post4" />
+        </div>
+        <div class="flex justify-between py-3 px-4">
+          <div class="flex gap-3">
+            <img src="./assets/images/Like.svg" alt="Like" />
+            <img src="./assets/images/Comment.svg" alt="Comment" />
+            <img src="./assets/images/Messanger.svg" alt="Messanger" />
+          </div>
+          <div>
+            <img class="pt-2 mr-5" src="./assets/images/Pagination.svg" alt="Pagination" />
+          </div>
+          <div>
+            <img src="./assets/images/Save.svg" alt="Save" />
+          </div>
+        </div>
+        <div class="flex gap-2 px-4">
+          <img src="./assets/images/Insta Post.svg" alt="Insta Post" />
+          <h2 class="text-xs font-normal">
+            Liked by <strong>craig_love</strong> and
+            <strong>44,686</strong>
+          </h2>
+        </div>
+        <div class="px-4 pt-2">
+          <h2 class="text-base font-normal">
+            <strong>Foodieland.</strong> The vegetables dishes need to have
+            certain vitamin for those people
+          </h2>
+        </div>
+        <div class="pt-5 px-4">
+          <p class="text-slate-700 text-sm">September 19</p>
+        </div>
+      </div>
+    </div>
+    <div class="container pt-20 px-10 mx-0 min-w-full flex flex-col items-center">
+      <button class="bg-black text-white text-sm hover:bg-white hover:text-black font-bold py-3 px-5 mt-3 rounded-2xl">
+        <div class="flex gap-2">
+          <h2>Visit On Instagram</h2>
+          <img class="w-[22px] h-[20px]" src="./assets/images/Insta Button.svg" alt="Insta Button" />
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="flex gap-20 mt-32 pl-10 pr-10 pb-16">
+    <h2 class="text-xl font-medium md:text-5xl md:font-semibold">
+      Try these delicious recipe to make your day
+    </h2>
+    <p class="text-base font-normal md:text-xl md:font-normal pt-2">
+      Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqut enim ad minim
+    </p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-24 my-10">
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down1.png" alt="Drop Down1" />
+        <h2 class="pt-3 ml-2 mb-8 text-lg font-semibold">
+          Mixed Tropical Fruit Salad with Superfood Boosts
+        </h2>
+      </div>
+      <div class="flex gap-3 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down2.png" alt="Drop Down2" />
+        <h2 class="pt-3 ml-2 mb-8 text-lg font-semibold">
+          Big and Juicy Wagyu Beef Cheeseburger
+        </h2>
+      </div>
+      <div class="flex gap-3 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down3.png" alt="Set2" />
+        <h2 class="pt-3 ml-2 mb-8 text-lg font-semibold">
+          Healthy Japanese Fried Rice with Asparagus
+        </h2>
+      </div>
+      <div class="flex gap-3">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down4.png" alt="Drop Down4" />
+        <h2 class="pt-3 ml-2 mb-8 text-lg font-semibold">
+          Cauliflower Walnut Vegetarian Taco Meat
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-24 my-10">
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down5.png" alt="Drop Down5" />
+        <h2 class="pt-3 ml-2 mb-7 text-lg font-semibold">
+          Rainbow Chicken Salad with Almond Honey Mustard Dressing
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down6.png" alt="Drop Down6" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          Barbeque Spicy Sandwiches with Chips
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down7.png" alt="Drop Down7" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          Firecracker Vegan Lettuce Wraps - Spicy!
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ml-0.5 mt-2">
+        <img class="rounded-3xl" src="./assets/images/Drop Down8.png" alt="Drop Down8" />
+        <h2 class="pt-3 ml-2 mb-14 text-lg font-semibold">
+          Chicken Ramen Soup with Mushroom
+        </h2>
+      </div>
+      <div class="flex gap-3 mb-5 ml-2">
+        <div class="flex">
+          <img src="./assets/images/Timer.svg" alt="Timer" />
+          <h2 class="text-sm">30 Minutes</h2>
+        </div>
+        <div class="flex">
+          <img src="./assets/images/ForkKnife.svg" alt="ForkKnife" />
+          <h2 class="text-sm">Snack</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#E7F9FD] mx-6 mb-10 pb-5 md:pb-0 rounded-3xl md:flex md:mx-20 mt-20">
+    <div class="mt-64">
+      <img class="hidden md:flex" src="/assets/images/Salad1.png" alt="Salad1" />
+    </div>
+    <div class="md:flex flex flex-col items-center gap-8 pt-8 mt-20">
+      <div class="text-2xl md:text-4xl text-center font-semi-bold">
+        <h1>Deliciousness to your inbox</h1>
+      </div>
+      <div class="text-xs md:text-sm font-normal flex flex-col text-center text-[#626262]">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqut enim ad minim
+        </p>
+      </div>
+      <div class="bg-white border-b-2 rounded-3xl flex justify-between items-center pt-1 pl-8">
+        <h2 class="pr-16 text-sm md:text-1xl">Your Email Address...</h2>
+        <button class="border-b-2 rounded-xl bg-black text-white py-3 px-8">
+          Subscribe
+        </button>
+      </div>
+    </div>
+    <div class="md:mt-96">
+      <img class="w-auto h-auto" src="/assets/images/Salad3.png" alt="Salad3" />
+    </div>
+    <img class="ml-44 rounded-3xl md:mt-64 md:ml-10 hidden md:flex" src="/assets/images/Salad2.png" alt="Salad2" />
+  </div>
+  <div class="flex justify-between md:mx-12 m-5 my-10">
+    <div class="flex flex-col gap-3">
+      <div class="logo">
+        <img src="./assets/images/Foodieland.png" alt="">
+      </div>
+      <div>
+        <p class="font-normal text-base text-[#626262]">
+          Lorem ipsum dolor sit amet, consectetuipisicing elit,
+        </p>
+      </div>
+    </div>
+    <div class="hidden md:block">
+      <div class="flex gap-10 text-base">
+        <a href="http://127.0.0.1:5500/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/pages/recipe.html">Recipes</a>
+        <a href="http://127.0.0.1:5500/pages/blogpost.html">Blog</a>
+        <a href="http://127.0.0.1:5500/pages/contact.html">Contact</a>
+        <a href="http://127.0.0.1:5500/pages/contact.html">About us</a>
+      </div>
+    </div>
+    <div class="md:hidden">
+      <i class="fa-solid fa-list-ul" style="color: #000000"></i>
+    </div>
+  </div>
+  <div class="md:flex justify-between m-5">
+    <div class="flex gap-1 text-center md:ml-[500px] m-5">
+      <p class="font-normal text-[#626262]">© 2020 Flowbase. Powered by</p>
+      <p class="font-normal text-[#FF7967]">Webflow</p>
+    </div>
+    <div>
+      <img class="md:mr-12 m-5" src="./assets/images/Social.svg" alt="Social Icons" />
+    </div>
+  </div>
+</body>
+
+</html>
